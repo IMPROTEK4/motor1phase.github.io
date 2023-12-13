@@ -1,0 +1,283 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.header{
+    height: 600px;
+    width: 375px;
+    margin: auto;
+    margin-top: -20px;
+    background-color: red;
+    margin-bottom: 20px;
+}
+.header .title{
+    height: 60px;
+    width: auto;
+    margin: auto;
+    /* background-color: aqua; */
+    border: 1px black solid;
+}
+.header .title h1{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 23px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.header .monborder{
+    height: 480px;
+    width: 375px;
+    margin: auto;
+    background-color: blue;
+    padding-top: 10px;
+}
+.header .monborder .monitor{
+    height: 30px;
+    width: 350px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: blueviolet;
+}
+.header .monborder h1{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 4px;
+    margin-left: -250px; 
+}
+.header .monborder .display{
+    height: 200px;
+    width: 350px;
+    margin: auto;
+    padding-top: 10px;
+    display: block;
+    justify-content: center;
+    align-content: center;
+    background-color: yellow;
+}
+
+.power #power{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+.power #box_power{
+    height: 10px;
+    width: 100px;
+    padding: 5px;
+    margin-right: 5px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+.power #unitpower{
+    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+.voltage{
+    margin-top: -10px;
+}
+.voltage #voltage{
+    margin-left: 50px;
+    margin-right: 42px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+.voltage #box_voltage{
+    height: 10px;
+    width: 100px;
+    padding: 5px;
+    margin-right: 5px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+.voltage #unitvoltage{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+
+.current{
+    margin-top: -10px;
+}
+.current #current{
+    margin-left: 50px;
+    margin-right: 42px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+.current #box_current{
+    height: 10px;
+    width: 100px;
+    padding: 5px;
+    margin-right: 5px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+.current #unitcurrent{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+
+/* .header .monborder .display #voltage{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+.header .monborder .display #box_voltage{
+    height: 20px;
+    width: 100px;
+    margin-right: 5px;
+    margin-top: 50px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    
+}
+.header .monborder .display #unitvoltage{
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.header .monborder .display #current{
+    margin-right: 50px;
+    margin-top: 100px;
+    margin-top: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+.header .monborder .display #box_current{
+    height: 20px;
+    width: 100px;
+    margin-right: 5px;
+    margin-top: 100px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    
+}
+.header .monborder .display #unitcurrent{
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+} */
+
+
+
+
+
+
+/* .footer{
+    height: 1100px;
+    width: 375px;
+    margin: auto;
+    background-color: blue;
+} */
+/* .footer .titlecontrol{
+    height: 70px;
+    width: 375px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: green;
+} */
+/* .footer .selectmode{
+    height: 70px;
+    width: 375px;
+    margin: auto;
+    background-color: darkgrey;
+} */
+/* .footer .schedual{
+    height: 500px;
+    width: 760px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 20px 20px 0px 20px;
+    background-color: deeppink;
+} */
+/* .footer .schedual .titlesch{
+    height: 30px;
+    width: 760px;
+    margin: auto;
+    background-color: greenyellow;
+} */
+/* .footer .schedual .time{
+    height: 100px;
+    width: 760px;
+    margin: auto;
+    background-color: cyan;
+} */
+/* .footer .schedual .svolume{
+    height: 300px;
+    width: 760px;
+    margin: auto;
+    background-color: darkorchid;
+} */
+
+/* .footer .manual{
+    height: 400px;
+    width: 760px;
+    margin: auto;
+    padding: 20px 20px 0px 20px;
+    background-color: chartreuse;
+} */
+/* .footer .manual .titleman{
+    height: 80px;
+    width: 760px;
+    margin: auto;
+    background-color: gold;
+} */
+/* .footer .manual .mvolume{
+    height: 200px;
+    width: 760px;
+    margin: auto;
+    background-color: magenta;
+} */
+/* .footer .manual .manualbtn{
+    height: 100px;
+    width: 760px;
+    margin: auto;
+    background-color:fuchsia;
+
+} */
