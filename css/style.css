@@ -1,50 +1,81 @@
 body{
     margin: 0px;
     padding: 0px;
+    /* outline: none; */
+}
+.contain{
+    height: 800px;
+    width: 375px;
+    margin-top: 5px;
+    background-color: chartreuse;
 }
 .header{
-    height: 600px;
+    height: 220px;
     width: 375px;
     margin: auto;
-    margin-top: -20px;
+    /* margin-top: -23px; */
+    padding-top: 5px;
     background-color: red;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 .header .title{
     height: 60px;
-    width: auto;
+    width: 365px;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color:deeppink;
+    -webkit-box-shadow: 0px 3px 1.5px 1.5px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 3px 1.5px 1.5px rgba(0,0,0,1);
+    box-shadow: 0px 3px 1.5px 1.5px rgba(0,0,0,1);
     /* background-color: aqua; */
-    border: 1px black solid;
+    /* border: 1px black solid; */
 }
 .header .title h1{
     color: aliceblue;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 28px;
     font-weight: bold;
-    margin-top: 23px;
+    /* margin-top: 23px; */
     display: flex;
+    margin: auto;
     justify-content: center;
     align-content: center;
 }
+
+
+/* ----MONITOR---- */
 .header .monborder{
-    height: 480px;
-    width: 375px;
+    height: 145px;
+    width: 360px;
     margin: auto;
-    background-color: blue;
+    /* background-color: blue; */
     padding-top: 10px;
 }
-.header .monborder .monitor{
+.header .monitor{
+    width: 350px;
+    height: 140px;
+    margin: auto;
+    display: block;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(216, 214, 214);
+    -webkit-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
+    -moz-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
+    box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
+}
+.header .monborder .monitortitle{
     height: 30px;
     width: 350px;
     margin: auto;
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 .header .monborder h1{
-    color: aliceblue;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -52,16 +83,17 @@ body{
     margin-left: -250px; 
 }
 .header .monborder .display{
-    height: 200px;
+    height: 100px;
     width: 350px;
     margin: auto;
     padding-top: 10px;
     display: block;
     justify-content: center;
     align-content: center;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
+/* ----DIPLAY DATAS VALUES---- */
 .power #power{
     margin-left: 50px;
     margin-right: 50px;
@@ -115,7 +147,6 @@ body{
     font-size: 15px;
     /* font-weight: bold; */
 }
-
 .current{
     margin-top: -10px;
 }
@@ -144,140 +175,373 @@ body{
     /* font-weight: bold; */
 }
 
-/* .header .monborder .display #voltage{
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 500px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-}
-.header .monborder .display #box_voltage{
-    height: 20px;
-    width: 100px;
-    margin-right: 5px;
-    margin-top: 50px;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    position: relative;
-    
-}
-.header .monborder .display #unitvoltage{
-    margin-top: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.header .monborder .display #current{
-    margin-right: 50px;
-    margin-top: 100px;
-    margin-top: 500px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-}
-.header .monborder .display #box_current{
-    height: 20px;
-    width: 100px;
-    margin-right: 5px;
-    margin-top: 100px;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    position: relative;
-    
-}
-.header .monborder .display #unitcurrent{
-    margin-top: 100px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-} */
-
-
-
-
-
-
-/* .footer{
-    height: 1100px;
-    width: 375px;
+/* ----CONTROLL---- */
+.footer{
+    height: 460px;
+    width: 350px;
     margin: auto;
-    background-color: blue;
-} */
-/* .footer .titlecontrol{
-    height: 70px;
-    width: 375px;
+    /* margin-top: -10px; */
+    /* padding-top: 5px; */
+    /* padding-left: 5px; */
+    display: block;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(216, 214, 214);
+    -webkit-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
+    -moz-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
+    box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
+
+}
+.footer .titlecontrol{
+    height: 100px;
+    width: 350px;
+    padding-top: 0.1px;
+    /* background-color: deeppink; */
+}
+.footer .titlecontrol h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+.footer .titlecontrol p,
+label {
+  font:
+    1rem 'Fira Sans',
+    sans-serif;
+}
+.footer .titlecontrol input {
+  margin: 0.4rem;
+}
+.footer .titlecontrol fieldset{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+
+.footer .schedual{
+    height: 190px;
+    width: 330px;
+    margin: auto;
+    background-color: rgb(216, 214, 214);
+    -webkit-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
+    -moz-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
+    box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
+}
+.footer .schedual .titlesch{
+    height: 32px;
+    width: 330px;
     margin: auto;
     display: flex;
     justify-content: center;
     align-content: center;
+    /* background-color: yellow; */
+    padding-top: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: black;
+}
+.footer .schedual .titlesch #schedualtitle{
+    font-weight: bold;
+    margin-top: 4px;
+    margin-left: -10px;
+    margin-right: 120px;
+}
+
+.footer .schedual .titlesch .button {
+    color: #ecf0f1;
+    font-size: 12px;
+    width: 60px;
+    height: 20px;
+    background-color: #e67e22;
+    border: 1px solid #f39c12;
+    border-radius: 5px;
+    padding: 2px;
+    box-shadow: 0px 6px 0px #d35400;
+    transition: all .1s;
+}
+   
+.button:active {
+    box-shadow: 0px 2px 0px #d35400;
+    position: relative;
+    top: 2px;
+}
+
+
+.footer .schedual .time{
+    height: 150px;
+    width: 330px;
+    margin: auto;
+    display: block;
+    justify-content: center;
+    align-content: center;
+    /* background-color: cyan; */
+}
+.footer .schedual .timeON{
+    height: 100px;
+    width: 160px;
+    float: left;
+    padding-left: 5px;
+    /* background-color: chartreuse; */
+}
+.timeON label {
+    display: block;
+    font:1rem 'Fira Sans',sans-serif;
+}
+.timeON input,label {
+    margin: 0.4rem 0;
+}
+.timeON h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+.timeON span{
+    display: flex;
+    /* justify-content: center; */
+    align-content: center;
+}
+.timeON #label_dateON{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-right: 7px;
+    margin-left: 10px;
+}
+.timeON #dateInput{
+    display: block;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 2px;
+    margin-top: 4px;
+    width: 100px;
+    height: 15px;
+}
+.timeON #label_timeON{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-right: -3px;
+    margin-left: 10px;
+}
+.timeON #timeInput{
+    display: block;
+    align-content: center;
+    justify-content: center;
+    margin: 1px 10px;
+    margin-top: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    height: 15px;
+}
+
+.footer .schedual .timeOFF{
+    height: 100px;
+    width: 160px;
+    padding-left: 5px;
+    float: left;
+    /* background-color:darkred; */
+}
+.timeOFF label {
+    display: block;
+    font:1rem 'Fira Sans',sans-serif;
+}
+.timeOFF input,label {
+    margin: 0.4rem 0;
+}
+.timeOFF h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+.timeOFF span{
+    display: flex;
+    /* justify-content: center; */
+    align-content: center;
+}
+.timeOFF #label_dateOFF{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-right: 7px;
+    margin-left: 10px;
+}
+.timeOFF #dateInput{
+    display: block;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 2px;
+    margin-top: 4px;
+    width: 100px;
+    height: 15px;
+}
+.timeOFF #label_timeOFF{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-right: -3px;
+    margin-left: 10px;
+}
+.timeOFF #timeInput{
+    display: block;
+    align-content: center;
+    justify-content: center;
+    margin: 1px 10px;
+    margin-top: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    height: 15px;
+}
+.footer .schedual .svolume{
+    height: 40px;
+    width: 330px;
+    padding-top: 10px;
+    float: left;
+    /* background-color: purple; */
+}
+.svolume .Sspeed #Sspeed{
+    margin-left: 75px;
+    margin-right: 10px;
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+.Sspeed #box_Sspeed{
+    height: 10px;
+    width: 60px;
+    padding: 5px;
+    margin-right: 0px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+.Sspeed #unitSspeed{
+    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+
+
+/* ---Manual--- */
+.footer .manual{
+    display: block;
+    justify-content: center;
+    align-content: center;
+    height: 148px;
+    width: 330px;
+    margin: auto;
+    margin-top: 10px;
+    /* background-color:cornflowerblue ; */
+    background-color: rgb(216, 214, 214);
+    -webkit-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
+    -moz-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
+    box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
+}
+.footer .manual .titleman{
+    height: 32px;
+    width: 330px;
+    padding-top: 10px;
+    display: block;
+    justify-content: center;
+    align-content: center;
+    /* background-color: yellow; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: black;
+}
+.manual .titleman #manualtitle{
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.footer .manual .mvolume{
+    height: 35px;
+    width: 330px;
+    display: flex;
+    padding-top: 10px;
+    align-content: center;
+    justify-content: center;
+    /* background-color: magenta; */
+}
+.footer .manual .manualbtn{
+    height: 60px;
+    width: 330px;
+    /* background-color:chartreuse; */
+}
+
+
+.Mspeed #Mspeed{
+    margin-left: -20px;
+    margin-right: 10px;
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+.Mspeed #box_Mspeed{
+    height: 10px;
+    width: 60px;
+    padding: 5px;
+    margin-right: 0px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+.Mspeed #unitMspeed{
+    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+
+.manualbtn .button_start {
+    color: #ecf0f1;
+    font-size: 12px;
+    width: 60px;
+    height: 20px;
     background-color: green;
-} */
-/* .footer .selectmode{
-    height: 70px;
-    width: 375px;
-    margin: auto;
-    background-color: darkgrey;
-} */
-/* .footer .schedual{
-    height: 500px;
-    width: 760px;
-    margin: auto;
-    margin-bottom: 20px;
-    padding: 20px 20px 0px 20px;
-    background-color: deeppink;
-} */
-/* .footer .schedual .titlesch{
-    height: 30px;
-    width: 760px;
-    margin: auto;
-    background-color: greenyellow;
-} */
-/* .footer .schedual .time{
-    height: 100px;
-    width: 760px;
-    margin: auto;
-    background-color: cyan;
-} */
-/* .footer .schedual .svolume{
-    height: 300px;
-    width: 760px;
-    margin: auto;
-    background-color: darkorchid;
-} */
+    border: 1px solid greenyellow;
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 50px;
+    margin-top: 20px;
+    box-shadow: 0px 6px 0px green;
+    transition: all .1s;
+}
+   
+.button_start:active {
+    box-shadow: 0px 2px 0px greenyellow;
+    position: relative;
+    top: 2px;
+}
 
-/* .footer .manual{
-    height: 400px;
-    width: 760px;
-    margin: auto;
-    padding: 20px 20px 0px 20px;
-    background-color: chartreuse;
-} */
-/* .footer .manual .titleman{
-    height: 80px;
-    width: 760px;
-    margin: auto;
-    background-color: gold;
-} */
-/* .footer .manual .mvolume{
-    height: 200px;
-    width: 760px;
-    margin: auto;
-    background-color: magenta;
-} */
-/* .footer .manual .manualbtn{
-    height: 100px;
-    width: 760px;
-    margin: auto;
-    background-color:fuchsia;
 
-} */
+.manualbtn .button_stop {
+    color: #ecf0f1;
+    font-size: 12px;
+    width: 60px;
+    height: 20px;
+    background-color: red;
+    border: 1px solid aliceblue;
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 80px;
+    margin-top: 20px;
+    box-shadow: 0px 6px 0px red;
+    transition: all .1s;
+}
+   
+.button_stop:active {
+    box-shadow: 0px 2px 0px rgb(236, 87, 87);
+    position: relative;
+    top: 2px;
+}

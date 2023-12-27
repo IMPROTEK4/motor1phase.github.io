@@ -5,78 +5,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/button.css"> -->
     <script src="js/script.js"></script>
 </head>
 <body>
 
-    <div class="header">
-        <div class="title">
-            <h1>System Control Motor</h1>
-        </div>
-        <div class="monborder">
-            <div class="monitor">
-                <h1>Monitor</h1>
-                <hr style="width: 340px; position:absolute; top: 70px;  "/>
+    <div class="contain">
+        <div class="header">
+            <div class="title">
+                <h1>System Control Motor</h1>
             </div>
-            <div class="display">
-                <div class="power">
-                    <label id="power">Power:</label>
-                    <input type="text" id="box_power" placeholder="100">
-                    <label id="unitpower">kWh</label>
-                </div><br>
-                <div class="voltage">
-                    <label id="voltage">Voltage:</label>
-                    <input type="text" id="box_voltage" placeholder="100">
-                    <label id="unitvoltage">V</label>
-                </div><br>
-                <div class="current">
-                    <label id="current">Current:</label>
-                    <input type="text" id="box_current" placeholder="100">
-                    <label id="unitcurrent">A</label>
+            <div class="monborder">
+                <div class="monitor">
+                    <div class="monitortitle">
+                        <h1 id="monitor">Monitor</h1>
+                        <hr style="width: 340px; position:absolute; top: 100px;  "/>
+                    </div>
+                    <div class="display">
+                        <div class="power">
+                            <label id="power">Power:</label>
+                            <input type="text" id="box_power" placeholder="100">
+                            <label id="unitpower">W</label>
+                        </div><br>
+                        <div class="voltage">
+                            <label id="voltage">Voltage:</label>
+                            <input type="text" id="box_voltage" placeholder="100">
+                            <label id="unitvoltage">V</label>
+                        </div><br>
+                        <div class="current">
+                            <label id="current">Current:</label>
+                            <input type="text" id="box_current" placeholder="100">
+                            <label id="unitcurrent">A</label>
+                        </div>
+                    </div>
                 </div>
-                </div>
-        </div>
-    </div>
-    
-    <div class="footer">
-        <div class="titlecontrol">
-            <h2></h2>
-        </div>
-
-        <div class="selectmode">
-
-        </div>
-
-        <div class="schedual">
-
-            <div class="titlesch">
-
-            </div>
-
-            <div class="time">
-
-                <div class="timeON">
-                </div>
-                <div class="timeOFF">
-                </div>
-            </div>
-            <div class="svolume">
-            </div>
-        </div>
-        <div class="manual">
-            <div class="titleman">
-            </div>
-            <div class="mvolume">
-
-            </div>
-
-            <div class="manualbtn">
-
             </div>
         </div>
         
+        <div class="footer">
+            <div class="titlecontrol">
+                <h1 id="control">Control</h1>
+                <hr style="width: 340px; position:absolute; top: 247px; left: 17px;"/>
 
+                <fieldset>
+                    <legend>Choose the function you want:</legend>
+                  
+                    <div class="funselect">
+                      <input style="width: 15px; height: 15px;" type="checkbox" id="schedual" name="schedual" checked />
+                      <label style="margin-right: 60px;" for="schedual">Schedual</label>
+
+                      <input style="width: 15px; height: 15px;" type="checkbox" id="manual" name="manual" />
+                      <label for="manual">Manual</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="schedual">
+
+                <div class="titlesch">
+                    <label id="schedualtitle">Schedual Mode:</label>
+                    <button class="button" id="button_sch_set" onclick="button_sch_cet()">SET</button>
+                    <hr style="width: 320px; position:absolute; top: 358px; left: 27px;"/>   
+                </div>
+
+                <div class="time">
+                    <div class="timeON">
+                        <h1 id="label_start">Start Date:</h1>
+
+                        <span>
+                        <label id="label_dateON" for="dateInput">Date:</label>
+                        <input type="date" id="dateInput" name="dateInput">
+                        </span>
+
+                        <span>
+                        <label id="label_timeON" for="timeInput" >Time:</label>
+                        <input type="time" id="timeInput" name="timeInput">
+                    </span>
+                    
+                    </div>
+                    <div class="timeOFF">
+                        <h1 id="label_stop">Stop Date:</h1>
+
+                        <span>
+                        <label id="label_dateOFF" for="dateInput">Date:</label>
+                        <input type="date" id="dateInput" name="dateInput">
+                        </span>
+
+                        <span>
+                        <label id="label_timeOFF" for="timeInput">Time:</label>
+                        <input type="time" id="timeInput" name="timeInput">
+
+                    </div>
+
+                    <div class="svolume">
+                        <div class="Sspeed">
+                            <label id="Sspeed">Speed:</label>
+                            <input type="text" id="box_Sspeed" placeholder="100">
+                            <label id="unitSspeed">%</label>
+                        </div>
+                    </div>
+
+                </div>      
+            </div>
+            <div class="manual">
+                <div class="titleman">
+                    <label id="manualtitle">Manual Mode:</label>
+                    <hr style="width: 320px; position:absolute; top: 560px; left: 27px;"/>   
+                </div>
+                <div class="mvolume">
+                    <div class="Mspeed">
+                        <label id="Mspeed">Speed:</label>
+                        <input type="text" id="box_Mspeed" placeholder="100">
+                        <label id="unitMspeed">%</label>
+                    </div>
+
+                </div>
+
+                <div class="manualbtn">
+                    <span>
+                        <button class="button_stop" id="button_sch_set" onclick="button_man_stop()">STOP</button>
+                    <!-- <hr style="width: 320px; position:absolute; top: 358px; left: 27px;"/> -->
+                    </span>
+                    <span>
+                        <button class="button_start" id="button_sch_set" onclick="button_man_start()">START</button>
+                    <!-- <hr style="width: 320px; position:absolute; top: 358px; left: 27px;"/> -->
+                    </span>
+                    
+
+                </div>
+            </div>
+        </div>
     </div>
-    
+
+    <!-- DAY OF TIMEON -->
+    <script>
+        // JavaScript to manipulate the date input format
+        document.getElementById('dateInput').addEventListener('input', function () {
+            const dateInput = this.value;
+
+            // Extract day, month, and year from the input value
+            const [year, month, day] = dateInput.split('-');
+
+            // Populate separate input fields if needed
+            document.getElementById('day').value = day;
+            document.getElementById('month').value = month;
+            document.getElementById('year').value = year;
+        });
+    </script>
+    <!-- TIME OF TIMEON -->
+    <script>
+        // JavaScript to manipulate the time input format
+        document.getElementById('timeInput').addEventListener('input', function () {
+            const timeInput = this.value;
+
+            // Extract hours and minutes from the input value
+            const [hours, minutes] = timeInput.split(':');
+
+            // Populate separate input fields if needed
+            document.getElementById('hours').value = hours;
+            document.getElementById('minutes').value = minutes;
+        });
+    </script>
+
 </body>
 </html>
