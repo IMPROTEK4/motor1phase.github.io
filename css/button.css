@@ -71,7 +71,7 @@ body {
     /* conic-gradient(white, gray 45deg, darkgray 90deg, gray 135deg, white 180deg, gray 225deg, darkgray 270deg, gray 315deg, white 360deg)*/
     background-color: #bbb;
   background-repeat: no-repeat;
-  afilter: blur(1px) contrast(1.8)
+  afilter: blur(1px) contrast(1.8);
 }
 
 .mvolume input[value="1"] { --x: 10%; --y: 50%; }

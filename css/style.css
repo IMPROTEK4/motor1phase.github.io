@@ -2,12 +2,17 @@ body{
     margin: 0px;
     padding: 0px;
     /* outline: none; */
+    display: flexbox;
+    margin: auto;
+    position: relative;
+    justify-content: center;
+    align-content: center;
 }
 .contain{
     height: 800px;
     width: 375px;
     margin-top: 5px;
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
 }
 .header{
     height: 220px;
@@ -15,17 +20,18 @@ body{
     margin: auto;
     /* margin-top: -23px; */
     padding-top: 5px;
-    background-color: red;
+    /* background-color: red; */
     /* margin-bottom: 20px; */
 }
 .header .title{
     height: 60px;
-    width: 365px;
+    width: 362px;
     margin: auto;
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color:deeppink;
+    background-color: red;
+    border-radius: 7px;
     -webkit-box-shadow: 0px 3px 1.5px 1.5px rgba(0,0,0,1);
     -moz-box-shadow: 0px 3px 1.5px 1.5px rgba(0,0,0,1);
     box-shadow: 0px 3px 1.5px 1.5px rgba(0,0,0,1);
@@ -47,19 +53,23 @@ body{
 
 /* ----MONITOR---- */
 .header .monborder{
-    height: 145px;
+    height: 185px;
     width: 360px;
     margin: auto;
+    margin-top: 8px;
     /* background-color: blue; */
     padding-top: 10px;
 }
 .header .monitor{
     width: 350px;
-    height: 140px;
+    height: 175px;
     margin: auto;
+    padding-left: 5px;
+    padding-right: 5px;
     display: block;
     justify-content: center;
     align-content: center;
+    border-radius: 7px;
     background-color: rgb(216, 214, 214);
     -webkit-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
     -moz-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
@@ -83,7 +93,7 @@ body{
     margin-left: -250px; 
 }
 .header .monborder .display{
-    height: 100px;
+    height: 135px;
     width: 350px;
     margin: auto;
     padding-top: 10px;
@@ -174,18 +184,51 @@ body{
     font-size: 15px;
     /* font-weight: bold; */
 }
+.factor{
+    margin-top: 10px;
+}
+.factor #factor{
+    margin-left: 50px;
+    margin-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+.factor #box_factor{
+    height: 10px;
+    width: 100px;
+    padding: 5px;
+    margin-right: 5px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+.factor #unitfactor{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+
+
+
 
 /* ----CONTROLL---- */
 .footer{
-    height: 460px;
+    height: 500px;
     width: 350px;
     margin: auto;
-    /* margin-top: -10px; */
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 53px;  /* lsihfuaog */
     /* padding-top: 5px; */
     /* padding-left: 5px; */
     display: block;
     justify-content: center;
     align-content: center;
+    border-radius: 7px;
     background-color: rgb(216, 214, 214);
     -webkit-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
     -moz-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
@@ -214,6 +257,8 @@ label {
 }
 .footer .titlecontrol input {
   margin: 0.4rem;
+  /* margin-left: 20px; */
+  /* padding-left: 100px; */
 }
 .footer .titlecontrol fieldset{
     display: flex;
@@ -221,13 +266,16 @@ label {
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
+    padding: 13px;
 }
 
 
 .footer .schedual{
     height: 190px;
-    width: 330px;
+    width: 340px;
     margin: auto;
+    margin-top: 20px;
+    border-radius: 4px;
     background-color: rgb(216, 214, 214);
     -webkit-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
     -moz-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
@@ -434,10 +482,11 @@ label {
     justify-content: center;
     align-content: center;
     height: 148px;
-    width: 330px;
+    width: 340px;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 20px;
     /* background-color:cornflowerblue ; */
+    border-radius: 4px;
     background-color: rgb(216, 214, 214);
     -webkit-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
     -moz-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);

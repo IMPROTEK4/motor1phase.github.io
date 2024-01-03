@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="slider">
+            <input type="range" min="0" max="100" value="20">
+        </div>
+        <div class="value"> 100 </div>
+    </div>
+
+    <script>
+        const slider = document.querySelector('input');
+        const value = document.querySelector('.value');
+        value.textContent = slider.value;
+        slider.oninput = function(){
+            value.textContent = this.value;
+        }
+    </script>
+</body>
+</html>
