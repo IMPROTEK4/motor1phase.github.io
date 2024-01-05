@@ -262,6 +262,10 @@ label {
     font-size: 13px;
     padding: 13px;
 }
+.footer .titlecontrol .funselect input{
+    width: 15px;
+    height: 15px;
+}
 
 
 .footer .schedual{
@@ -546,7 +550,6 @@ label {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
-
 .manualbtn .button_start {
     color: #ecf0f1;
     font-size: 12px;
@@ -561,7 +564,6 @@ label {
     box-shadow: 0px 6px 0px green;
     transition: all .1s;
 }
-   
 .button_start:active {
     box-shadow: 0px 2px 0px greenyellow;
     position: relative;
@@ -590,26 +592,31 @@ label {
     top: 2px;
 }
 
+
+
+
+
 @media only screen and (min-width: 1000px){
-    *{
+    /* *{
         overflow: hidden;
-    }
+    } */
     .contain{
-        height: 100vh;
+        height: auto;
+        margin-bottom: 10px;
         /* background-color: chartreuse; */
     }
     .header{
         height: 410px;
         width: 1000px;
         border-radius: 7px;
-        background-color: red;
+        /* background-color: red; */
     }
     .header .title{
         height: 70px;
         width: 990px;
         margin: auto;
         margin-top: 0px;
-        background-color: aqua;
+        /* background-color: aqua; */
     }
     .header .title h1{
         font-size: 55px;
@@ -619,12 +626,6 @@ label {
         justify-content: center;
         align-content: center;
     }
-    .footer{
-        margin-top: 10px;
-        height: 750px;
-        width: 985px;
-        background-color: blue;
-    }
 
 
     /* ---MONITOR--- */
@@ -632,7 +633,7 @@ label {
         height: 350px;
         width: 1000px;
         margin-top: 10px;
-        background-color: blue;
+        /* background-color: blue; */
         padding-top: 10px;
     }
     .header .monitor{
@@ -677,7 +678,7 @@ label {
         height: 35px;
         width: 200px;
         padding: 5px;
-        margin-left: 20px;
+        margin-left: 50px;
         font-size: 20px;
         font-weight: bold;
     }
@@ -698,7 +699,7 @@ label {
         height: 35px;
         width: 200px;
         padding: 5px;
-        margin-left: 15px;
+        margin-left: 45px;
         font-size: 20px;
         font-weight: bold;
     }
@@ -720,7 +721,7 @@ label {
         width: 200px;
         padding: 5px;
         font-size: 20px;
-        margin-left: 15px;
+        margin-left: 45px;
         font-weight: bold;
     }
     .current #unitcurrent{
@@ -740,6 +741,7 @@ label {
         height: 35px;
         width: 200px;
         padding: 5px;
+        margin-left: 30px;
         font-size: 20px;
         font-weight: bold;
     }
@@ -747,5 +749,295 @@ label {
         font-size: 20px;
         font-weight: bold;
     }
+
+
+    /* ---CONTROL--- */
+    .footer{
+        margin-top: 10px;
+        height: 800px;
+        width: 980px;
+        border-radius: 10PX;
+    }
+    .footer .titlecontrol{
+        height: 200px;
+        width: 980px;
+        padding-top: 0.1px;
+        /* background-color: deeppink; */
+    }
+    .footer .titlecontrol h1{
+        font-size: 35px;
+        margin-left: 130px;
+        margin-top: 3px;
+    }
+    .footer .titlecontrol p,
+    label {
+    font:
+        1.8rem 'Fira Sans',
+        sans-serif;
+    }
+    .footer .titlecontrol input {
+        margin: 1.2rem;
+    }
+    .footer .titlecontrol fieldset{
+        width: 870px;
+        font-size: 20px;
+        padding: 18px;
+        margin: auto;
+    }
+    .footer .titlecontrol .funselect input{
+        width: 22px;
+        height: 22px;
+    }
+    .footer .titlecontrol .funselect .scedualtitle{
+        margin-right: 150px;
+    }
+
+
+    /* ---SCHEDUAL--- */
+    .footer .schedual{
+        height: 310px;
+        width: 905px;
+        margin: auto;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-radius: 10px;
+    }
+    .footer .schedual .titlesch{
+        height: 45px;
+        width: 900px;
+        margin: auto;
+        /* background-color: yellow; */
+        padding-top: 5px;
+    }
+    .footer .schedual .titlesch #schedualtitle{
+        margin-top: 4px;
+        margin-right: 350px;
+        font-size: 25px;
+    }
     
+
+    /* ---BUTTON SET--- */
+    .footer .button_set {
+        font-size: 20px;
+        width: 90px;
+        height: 30px;
+        border-radius: 10px;
+        padding: 2px;
+        margin-left: 50px;
+        box-shadow: 0px 6px 3px blue;
+    }  
+    .button_set:active {
+        box-shadow: 0px 2px 0px greenyellow;
+        position: relative;
+        top: 2px;
+    }
+
+    /* ---TIME ON--- */
+    .footer .schedual .time{
+        height: 250px;
+        width: 900px;
+        display: block;
+        margin-top: 10px;
+        /* background-color: cyan; */
+    }
+    .footer .schedual .timeON{
+        height: 65%;
+        width: 445px;
+        float: left;
+        /* background-color: chartreuse; */
+    }
+    .timeON input,label {
+        margin: 0.5rem 0;
+    }
+    .timeON h1{
+        font-size: 20px;
+        margin-left: 90px;
+    }
+    .timeON span{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .timeON #label_dateON{
+        font-size: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-top: 13px;
+    }
+    .timeON #dateInput{
+        padding: 10px;
+        width: 150px;
+        height: 20px;
+        font-size: 20px;
+    }
+    .timeON #label_timeON{
+        font-size: 20px;
+        margin-left: 50px;
+        margin-right: 30px;
+        margin-top: 13px;
+    }
+    .timeON #timeInput{
+        padding: 10px;
+        width: 150px;
+        height: 20px;
+        font-size: 20px;
+    }
+
+    /* ---TIME OFF--- */
+    .footer .schedual .timeOFF{
+        height: 65%;
+        width: 445px;
+        float: left;
+        /* background-color: red; */
+    }
+    .timeOFF input,label {
+        margin: 0.5rem 0;
+    }
+    .timeOFF h1{
+        font-size: 20px;
+        margin-left: 90px;
+    }
+    .timeOFF span{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .timeOFF #label_dateOFF{
+        font-size: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-top: 13px;
+    }
+    .timeOFF #dateInput{
+        padding: 10px;
+        width: 150px;
+        height: 20px;
+        font-size: 20px;
+    }
+    .timeOFF #label_timeOFF{
+        font-size: 20px;
+        margin-left: 50px;
+        margin-right: 30px;
+        margin-top: 13px;
+    }
+    .timeOFF #timeInput{
+        padding: 10px;
+        width: 150px;
+        height: 20px;
+        font-size: 20px;
+    }
+
+    /* ---SCHEDUAL SPEED--- */
+    .footer .schedual .svolume{
+        height: 25%;
+        width: 100%;
+        padding-top: 20px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        /* background-color: purple; */
+    }
+    .svolume .Sspeed #Sspeed{
+        margin: auto;
+        font-size: 20px;
+    }
+    .Sspeed #box_Sspeed{
+        height: 30px;
+        width: 120px;
+        padding: 5px;
+        margin-right: 5px;
+        margin-left: 20px;
+        font-size: 20px;
+    }
+    .Sspeed #unitSspeed{
+        font-size: 20px;
+    }
+
+
+    /* ---MANUAL--- */
+    .footer .manual{
+        height: 230px;
+        width: 905px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+    .footer .manual .titleman{
+        height: 35px;
+        width: 905px;
+        padding-top: 10px;
+        /* background-color: yellow; */
+        /* padding-left: 90px; */
+    }
+    .footer .manual #manualtitle{
+        font-size: 25px;
+        margin-left: 110px;
+    }
+
+
+    /* ---MANUAL SPEED--- */
+    .footer .manual .mvolume{
+        height: 25%;
+        width: 100%;
+        padding-top: 20px;
+        /* background-color: purple; */
+    }
+    .mvolume .Mspeed #Mspeed{
+        margin: auto;
+        font-size: 20px;
+    }
+    .Mspeed #box_Mspeed{
+        height: 30px;
+        width: 120px;
+        padding: 5px;
+        margin-right: 5px;
+        margin-left: 20px;
+        font-size: 20px;
+    }
+    .Mspeed #unitMspeed{
+        font-size: 20px;
+    }
+    .footer .manual .manualbtn{
+        padding: 0;
+        margin: 0;
+        height: 85px;
+        width: 905px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        /* background-color: blue; */
+    }
+
+    /* ---MANUAL BUTTON--- */
+
+    /* ---BUTTON START--- */
+    .manualbtn .button_start {
+        font-size: 20px;
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+        margin-left: 60px;
+    }
+    .button_start:active {
+        box-shadow: 0px 6px 0px yellow;
+        position: relative;
+        top: 2px;
+    }
+
+    /* ---BUTTON STOP--- */
+    .manualbtn .button_stop {
+        font-size: 20px;
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+        margin-right: 60px;
+        margin-left: -1px;
+    }
+       
+    .button_stop:active {
+        box-shadow: 0px 6px 0px yellow;
+        position: relative;
+        top: 2px;
+    }
 }

@@ -54,13 +54,15 @@
 
                 <fieldset>
                     <legend>Choose the function you want:</legend>
-                  
                     <div class="funselect">
-                      <input style="width: 15px; height: 15px;" type="checkbox" id="schedual" name="schedual" checked />
-                      <label style="margin-right: 60px;" for="schedual">Schedual</label>
-
-                      <input style="width: 15px; height: 15px;" type="checkbox" id="manual" name="manual" />
-                      <label for="manual">Manual</label>
+                        <span class="scedualtitle">
+                            <input  type="checkbox" id="schedual" name="schedual" checked />
+                            <label style="margin-right: 60px;" for="schedual">Schedual</label>
+                        </span>
+                        <span class="manualtitle">
+                            <input  type="checkbox" id="manual" name="manual" />
+                            <label for="manual">Manual</label>
+                        </span>
                     </div>
                 </fieldset>
             </div>
@@ -105,7 +107,7 @@
                     <div class="svolume">
                         <div class="Sspeed">
                             <label id="Sspeed">Speed:</label>
-                            <input type="text" id="box_Sspeed" placeholder="100">
+                            <input type="number" name="numberInput" min="0" max="50" id="box_Sspeed" placeholder="0 - 50" step="10">
                             <label id="unitSspeed">Hz</label>
                         </div>
                     </div>
@@ -120,7 +122,7 @@
                 <div class="mvolume">
                     <div class="Mspeed">
                         <label id="Mspeed">Speed:</label>
-                        <input type="text" id="box_Mspeed" placeholder="100">
+                        <input type="number" name="numberInput" min="0" max="50" id="box_Mspeed" placeholder="0 - 50" step="10">
                         <label id="unitMspeed">Hz</label>
                     </div>
 
