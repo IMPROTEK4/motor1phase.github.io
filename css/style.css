@@ -134,7 +134,7 @@ body{
 }
 .voltage #voltage{
     margin-left: 50px;
-    margin-right: 41px;
+    margin-right: 42px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
@@ -184,7 +184,7 @@ body{
 }
 .frequency #frequency{
     margin-left: 50px;
-    margin-right: 22px;
+    margin-right: 21px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
