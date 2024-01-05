@@ -233,7 +233,7 @@ body{
     height: 100px;
     width: 350px;
     padding-top: 0.1px;
-    background-color: deeppink;
+    /* background-color: deeppink; */
 }
 .footer .titlecontrol h1{
     font-family: Arial, Helvetica, sans-serif;
@@ -282,7 +282,7 @@ label {
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: yellow;
+    /* background-color: yellow; */
     padding-top: 7px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
@@ -326,14 +326,14 @@ label {
     display: block;
     justify-content: center;
     align-content: center;
-    background-color: cyan;
+    /* background-color: cyan; */
 }
 .footer .schedual .timeON{
     height: 100px;
     width: 160px;
     float: left;
     padding-left: 5px;
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
 }
 .timeON label {
     display: block;
@@ -389,7 +389,7 @@ label {
     width: 160px;
     padding-left: 5px;
     float: left;
-    background-color:darkred;
+    /* background-color:darkred; */
 }
 .timeOFF label {
     display: block;
@@ -444,7 +444,7 @@ label {
     width: 330px;
     padding-top: 10px;
     float: left;
-    background-color: purple;
+    /* background-color: purple; */
 }
 .svolume .Sspeed #Sspeed{
     margin-left: 75px;
@@ -481,7 +481,7 @@ label {
     width: 340px;
     margin: auto;
     margin-top: 20px;
-    background-color:cornflowerblue ;
+    /* background-color:cornflowerblue ; */
     border-radius: 4px;
     background-color: rgb(216, 214, 214);
     -webkit-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
@@ -495,7 +495,7 @@ label {
     display: block;
     justify-content: center;
     align-content: center;
-    background-color: yellow;
+    /* background-color: yellow; */
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     color: black;
@@ -513,12 +513,12 @@ label {
     /* margin-top: 10px; */
     align-content: center;
     justify-content: center;
-    background-color: magenta;
+    /* background-color: magenta; */
 }
 .footer .manual .manualbtn{
     height: 70px;
     width: 340px;
-    background-color:chartreuse;
+    /* background-color:chartreuse; */
 }
 
 
