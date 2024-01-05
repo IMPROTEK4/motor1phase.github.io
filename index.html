@@ -19,7 +19,7 @@
                 <div class="monitor">
                     <div class="monitortitle">
                         <h1 id="monitor">Monitor</h1>
-                        <hr style="width: 340px; position:absolute; top: 105px;  "/>
+                        <!-- <hr style="width: 340px; position:absolute; top: 101px; "/> -->
                     </div>
                     <div class="display">
                         <div class="power">
@@ -37,10 +37,10 @@
                             <input type="text" id="box_current" placeholder="100">
                             <label id="unitcurrent">A</label>
                         </div>
-                        <div class="factor">
-                            <label id="factor">Frequency:</label>
-                            <input type="text" id="box_factor" placeholder="0 - 50">
-                            <label id="unitfactor">Hz</label>
+                        <div class="frequency">
+                            <label id="frequency">Frequency:</label>
+                            <input type="text" id="box_frequency" placeholder="100">
+                            <label id="unitfrequency">Hz</label>
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
         <div class="footer">
             <div class="titlecontrol">
                 <h1 id="control">Control</h1>
-                <hr style="width: 340px; position:absolute; top: 305px; "/>
+                <!-- <hr style="width: 345px; position:absolute; top: 302px; "/> -->
 
                 <fieldset>
                     <legend>Choose the function you want:</legend>
@@ -69,8 +69,8 @@
 
                 <div class="titlesch">
                     <label id="schedualtitle">Schedual Mode:</label>
-                    <button class="button" id="button_sch_set" onclick="button_sch_cet()">SET</button>
-                    <hr style="width: 320px; position:absolute; top: 438px; "/>   
+                    <button class="button_set" id="button_set" onclick="button_set()">SET</button>
+                    <!-- <hr style="width: 338px; position:absolute; top: 434px; "/>    -->
                 </div>
 
                 <div class="time">
@@ -115,7 +115,7 @@
             <div class="manual">
                 <div class="titleman">
                     <label id="manualtitle">Manual Mode:</label>
-                    <hr style="width: 320px; position:absolute; top: 641px; "/>   
+                    <!-- <hr style="width: 338px; position:absolute; top: 641px; "/>    -->
                 </div>
                 <div class="mvolume">
                     <div class="Mspeed">
@@ -128,11 +128,11 @@
 
                 <div class="manualbtn">
                     <span>
-                        <button class="button_stop" id="button_sch_set" onclick="button_man_stop()">STOP</button>
+                        <button class="button_stop" id="button_stop" onclick="button_man_stop()">STOP</button>
                     <!-- <hr style="width: 320px; position:absolute; top: 358px; left: 27px;"/> -->
                     </span>
                     <span>
-                        <button class="button_start" id="button_sch_set" onclick="button_man_start()">START</button>
+                        <button class="button_start" id="button_start" onclick="button_man_start()">START</button>
                     <!-- <hr style="width: 320px; position:absolute; top: 358px; left: 27px;"/> -->
                     </span>
                     

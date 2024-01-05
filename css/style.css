@@ -1,7 +1,6 @@
 body{
     margin: 0px;
     padding: 0px;
-    /* outline: none; */
     display: flexbox;
     margin: auto;
     position: relative;
@@ -10,7 +9,8 @@ body{
 }
 .contain{
     height: 800px;
-    width: 375px;
+    width: auto;
+    min-width: 375px;
     margin-top: 5px;
     /* background-color: chartreuse; */
 }
@@ -18,10 +18,12 @@ body{
     height: 220px;
     width: 375px;
     margin: auto;
-    /* margin-top: -23px; */
     padding-top: 5px;
+    border-radius: 7px;
     /* background-color: red; */
-    /* margin-bottom: 20px; */
+    /* -webkit-box-shadow: 0px 3px 1.5px 1.5px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 3px 1.5px 1.5px rgba(0,0,0,1);
+    box-shadow: 0px 3px 1.5px 1.5px rgba(0,0,0,1); */
 }
 .header .title{
     height: 60px;
@@ -43,7 +45,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 28px;
     font-weight: bold;
-    /* margin-top: 23px; */
     display: flex;
     margin: auto;
     justify-content: center;
@@ -110,7 +111,6 @@ body{
     margin-top: 100px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    /* font-weight: bold; */
 }
 .power #box_power{
     height: 10px;
@@ -128,7 +128,6 @@ body{
     margin-top: 5px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    /* font-weight: bold; */
 }
 .voltage{
     margin-top: -10px;
@@ -138,7 +137,6 @@ body{
     margin-right: 42px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    /* font-weight: bold; */
 }
 .voltage #box_voltage{
     height: 10px;
@@ -155,7 +153,6 @@ body{
 .voltage #unitvoltage{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    /* font-weight: bold; */
 }
 .current{
     margin-top: -10px;
@@ -165,7 +162,6 @@ body{
     margin-right: 42px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    /* font-weight: bold; */
 }
 .current #box_current{
     height: 10px;
@@ -182,19 +178,17 @@ body{
 .current #unitcurrent{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    /* font-weight: bold; */
 }
-.factor{
+.frequency{
     margin-top: 10px;
 }
-.factor #factor{
+.frequency #frequency{
     margin-left: 50px;
     margin-right: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    /* font-weight: bold; */
 }
-.factor #box_factor{
+.frequency #box_frequency{
     height: 10px;
     width: 100px;
     padding: 5px;
@@ -206,10 +200,9 @@ body{
     font-size: 13px;
     font-weight: bold;
 }
-.factor #unitfactor{
+.frequency #unitfrequency{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    /* font-weight: bold; */
 }
 
 
@@ -217,12 +210,13 @@ body{
 
 /* ----CONTROLL---- */
 .footer{
-    height: 500px;
+    height: 510px;
     width: 350px;
     margin: auto;
     padding-left: 5px;
     padding-right: 5px;
-    margin-top: 53px;  /* lsihfuaog */
+    padding-top: 5px;
+    margin-top: 53px;  
     /* padding-top: 5px; */
     /* padding-left: 5px; */
     display: block;
@@ -239,7 +233,7 @@ body{
     height: 100px;
     width: 350px;
     padding-top: 0.1px;
-    /* background-color: deeppink; */
+    background-color: deeppink;
 }
 .footer .titlecontrol h1{
     font-family: Arial, Helvetica, sans-serif;
@@ -288,7 +282,7 @@ label {
     display: flex;
     justify-content: center;
     align-content: center;
-    /* background-color: yellow; */
+    background-color: yellow;
     padding-top: 7px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
@@ -298,27 +292,31 @@ label {
     font-weight: bold;
     margin-top: 4px;
     margin-left: -10px;
-    margin-right: 120px;
+    margin-right: 80px;
 }
 
-.footer .schedual .titlesch .button {
+.footer .button_set {
     color: #ecf0f1;
     font-size: 12px;
     width: 60px;
     height: 20px;
-    background-color: #e67e22;
-    border: 1px solid #f39c12;
+    background-color: blue;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     padding: 2px;
-    box-shadow: 0px 6px 0px #d35400;
+    margin-left: 50px;
+    box-shadow: 0px 6px 0px blue;
     transition: all .1s;
 }
    
-.button:active {
-    box-shadow: 0px 2px 0px #d35400;
+.button_set:active {
+    box-shadow: 0px 2px 0px greenyellow;
     position: relative;
     top: 2px;
 }
+
+
+
 
 
 .footer .schedual .time{
@@ -328,14 +326,14 @@ label {
     display: block;
     justify-content: center;
     align-content: center;
-    /* background-color: cyan; */
+    background-color: cyan;
 }
 .footer .schedual .timeON{
     height: 100px;
     width: 160px;
     float: left;
     padding-left: 5px;
-    /* background-color: chartreuse; */
+    background-color: chartreuse;
 }
 .timeON label {
     display: block;
@@ -391,7 +389,7 @@ label {
     width: 160px;
     padding-left: 5px;
     float: left;
-    /* background-color:darkred; */
+    background-color:darkred;
 }
 .timeOFF label {
     display: block;
@@ -446,7 +444,7 @@ label {
     width: 330px;
     padding-top: 10px;
     float: left;
-    /* background-color: purple; */
+    background-color: purple;
 }
 .svolume .Sspeed #Sspeed{
     margin-left: 75px;
@@ -454,7 +452,6 @@ label {
     margin-top: 100px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    /* font-weight: bold; */
 }
 .Sspeed #box_Sspeed{
     height: 10px;
@@ -472,7 +469,6 @@ label {
     margin-top: 5px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    /* font-weight: bold; */
 }
 
 
@@ -481,11 +477,11 @@ label {
     display: block;
     justify-content: center;
     align-content: center;
-    height: 148px;
+    height: 154px;
     width: 340px;
     margin: auto;
     margin-top: 20px;
-    /* background-color:cornflowerblue ; */
+    background-color:cornflowerblue ;
     border-radius: 4px;
     background-color: rgb(216, 214, 214);
     -webkit-box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
@@ -494,12 +490,12 @@ label {
 }
 .footer .manual .titleman{
     height: 32px;
-    width: 330px;
+    width: 340px;
     padding-top: 10px;
     display: block;
     justify-content: center;
     align-content: center;
-    /* background-color: yellow; */
+    background-color: yellow;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     color: black;
@@ -510,18 +506,19 @@ label {
     margin-left: 10px;
 }
 .footer .manual .mvolume{
-    height: 35px;
-    width: 330px;
+    height: 27px;
+    width: 340px;
     display: flex;
-    padding-top: 10px;
+    padding-top: 17px;
+    /* margin-top: 10px; */
     align-content: center;
     justify-content: center;
-    /* background-color: magenta; */
+    background-color: magenta;
 }
 .footer .manual .manualbtn{
-    height: 60px;
-    width: 330px;
-    /* background-color:chartreuse; */
+    height: 70px;
+    width: 340px;
+    background-color:chartreuse;
 }
 
 
@@ -531,7 +528,6 @@ label {
     margin-top: 100px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    /* font-weight: bold; */
 }
 .Mspeed #box_Mspeed{
     height: 10px;
@@ -549,7 +545,6 @@ label {
     margin-top: 5px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    /* font-weight: bold; */
 }
 
 .manualbtn .button_start {
@@ -593,4 +588,164 @@ label {
     box-shadow: 0px 2px 0px rgb(236, 87, 87);
     position: relative;
     top: 2px;
+}
+
+@media only screen and (min-width: 1000px){
+    *{
+        overflow: hidden;
+    }
+    .contain{
+        height: 100vh;
+        /* background-color: chartreuse; */
+    }
+    .header{
+        height: 410px;
+        width: 1000px;
+        border-radius: 7px;
+        background-color: red;
+    }
+    .header .title{
+        height: 70px;
+        width: 990px;
+        margin: auto;
+        margin-top: 0px;
+        background-color: aqua;
+    }
+    .header .title h1{
+        font-size: 55px;
+        font-weight: bold;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-content: center;
+    }
+    .footer{
+        margin-top: 10px;
+        height: 750px;
+        width: 985px;
+        background-color: blue;
+    }
+
+
+    /* ---MONITOR--- */
+    .header .monborder{
+        height: 350px;
+        width: 1000px;
+        margin-top: 10px;
+        background-color: blue;
+        padding-top: 10px;
+    }
+    .header .monitor{
+        width: 980px;
+        height: 320px;
+        border-radius: 10px;
+        margin-top: -6px;
+    }
+    .header .monborder .monitortitle{
+        height: 60px;
+        width: 990px;
+        margin-top: 2px;
+        /* background-color: yellow; */
+    }
+.monitortitle hr{
+        top: 200px;
+    }
+    .header .monborder h1{
+        font-size: 35px;
+        margin-left: -600px;
+        /* margin-top: 10px; */
+    }
+    .header .monborder .display{
+        height: 280px;
+        width: 790px;
+        margin-top: -20px;
+        padding-left: 200px;
+        /* background-color: red; */
+    }
+
+
+    .power{
+        height: 60px;
+        display: block;
+        justify-content: center;
+        align-content: center;
+    }
+    .power #power{
+        font-size: 27px;
+    }
+    .power #box_power{
+        height: 35px;
+        width: 200px;
+        padding: 5px;
+        margin-left: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .power #unitpower{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .voltage{
+        height: 60px;
+        display: block;
+        justify-content: center;
+        align-content: center;
+    }
+    .voltage #voltage{
+        font-size: 27px;
+    }
+    .voltage #box_voltage{
+        height: 35px;
+        width: 200px;
+        padding: 5px;
+        margin-left: 15px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .voltage #unitvoltage{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .current{
+        height: 60px;
+        display: block;
+        justify-content: center;
+        align-content: center;
+    }
+    .current #current{
+        font-size: 27px;
+    }
+    .current #box_current{
+        height: 35px;
+        width: 200px;
+        padding: 5px;
+        font-size: 20px;
+        margin-left: 15px;
+        font-weight: bold;
+    }
+    .current #unitcurrent{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .frequency{
+        height: 60px;
+        display: block;
+        justify-content: center;
+        align-content: center;
+    }
+    .frequency #frequency{
+        font-size: 27px;
+    }
+    .frequency #box_frequency{
+        height: 35px;
+        width: 200px;
+        padding: 5px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .frequency #unitfrequency{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
 }
