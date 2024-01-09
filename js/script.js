@@ -129,13 +129,13 @@ function button_man_start() {
 
 // ---MANUAL BUTTON STOP 
 function button_man_stop() {
-  const InputMspeed = document.getElementById('box_Mspeed');
+  // const InputMspeed = document.getElementById('box_Mspeed');
 
   const message = 'stop';                
   client.send('IMP_CONTROL', message);
   console.log('Published IMP_CONTROL:', message);
 
-  InputMspeed.value = '';
+  // InputMspeed.value = '';
 
   //  ---LOCK BUTTON START
   // ButtonStart = dgocument.getElementById('button_start');
