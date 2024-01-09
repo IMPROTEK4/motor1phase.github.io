@@ -59,14 +59,15 @@ body{
     margin: auto;
     margin-top: 8px;
     /* background-color: blue; */
-    padding-top: 10px;
+    padding-top: 5px;
 }
 .header .monitor{
     width: 350px;
-    height: 175px;
+    height: 185px;
     margin: auto;
     padding-left: 5px;
     padding-right: 5px;
+    padding-top: 3px;
     display: block;
     justify-content: center;
     align-content: center;
@@ -77,7 +78,7 @@ body{
     box-shadow: 0px 1px 2px 2px rgb(31, 29, 29);
 }
 .header .monborder .monitortitle{
-    height: 30px;
+    height: 35px;
     width: 350px;
     margin: auto;
     display: flex;
@@ -91,7 +92,8 @@ body{
     font-size: 20px;
     font-weight: bold;
     margin-top: 4px;
-    margin-left: -250px; 
+    margin-left: 0px; 
+    margin-right: 200px;
 }
 .header .monborder .display{
     height: 135px;
@@ -102,6 +104,26 @@ body{
     justify-content: center;
     align-content: center;
     /* background-color: yellow; */
+}
+.button_read {
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    width: 60px;
+    height: 20px;
+    background-color: aqua;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+    margin-top:5px;
+    box-shadow: 0px 4px 0px aqua;
+    transition: all .1s;
+}
+   
+.button_read:active {
+    box-shadow: 0px 2px 0px greenyellow;
+    position: relative;
+    top: 2px;
 }
 
 /* ----DIPLAY DATAS VALUES---- */
@@ -386,6 +408,7 @@ label {
     padding-top: 1px;
     padding-bottom: 1px;
     height: 15px;
+    width: 100px;
 }
 
 .footer .schedual .timeOFF{
@@ -442,6 +465,7 @@ label {
     padding-top: 1px;
     padding-bottom: 1px;
     height: 15px;
+    width: 100px;
 }
 .footer .schedual .svolume{
     height: 40px;
@@ -481,7 +505,7 @@ label {
     display: block;
     justify-content: center;
     align-content: center;
-    height: 154px;
+    height: 165px;
     width: 340px;
     margin: auto;
     margin-top: 20px;
@@ -504,6 +528,8 @@ label {
     font-size: 13px;
     color: black;
 }
+
+
 .manual .titleman #manualtitle{
     font-weight: bold;
     margin-top: 40px;
@@ -553,8 +579,8 @@ label {
 .manualbtn .button_start {
     color: #ecf0f1;
     font-size: 12px;
-    width: 60px;
-    height: 20px;
+    width: 70px;
+    height: 25px;
     background-color: green;
     border: 1px solid greenyellow;
     border-radius: 5px;
@@ -574,8 +600,8 @@ label {
 .manualbtn .button_stop {
     color: #ecf0f1;
     font-size: 12px;
-    width: 60px;
-    height: 20px;
+    width: 70px;
+    height: 25px;
     background-color: red;
     border: 1px solid aliceblue;
     border-radius: 5px;
@@ -736,6 +762,7 @@ label {
     }
     .frequency #frequency{
         font-size: 27px;
+        margin-right: 20px;
     }
     .frequency #box_frequency{
         height: 35px;
