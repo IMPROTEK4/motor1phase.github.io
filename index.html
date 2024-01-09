@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Motor 1Phase</title>
+    <link rel="icon" href="IMPROTEK.jpg">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
     <!-- <link rel="stylesheet" href="css/button.css"> -->
     <script src="js/script.js"></script>
 </head>
@@ -19,6 +21,7 @@
                 <div class="monitor">
                     <div class="monitortitle">
                         <h1 id="monitor">Monitor</h1>
+                        <button class="button_read" id="button_read" onclick="button_read()" disabled>READ</button>
                         <!-- <hr style="width: 340px; position:absolute; top: 101px; "/> -->
                     </div>
                     <div class="display">
@@ -107,7 +110,7 @@
                     <div class="svolume">
                         <div class="Sspeed">
                             <label id="Sspeed">Speed:</label>
-                            <input type="number" name="numberInput"  id="box_Sspeed" placeholder="0 - 50" step="10">
+                            <input type="number" name="numberInput"  id="box_Sspeed" placeholder="0 - 50" min="0" max="50" step="10">
                             <label id="unitSspeed">Hz</label>
                         </div>
                     </div>
@@ -117,12 +120,13 @@
             <div class="manual">
                 <div class="titleman">
                     <label id="manualtitle">Manual Mode:</label>
+
                     <!-- <hr style="width: 338px; position:absolute; top: 641px; "/>    -->
                 </div>
                 <div class="mvolume">
                     <div class="Mspeed">
                         <label id="Mspeed">Speed:</label>
-                        <input type="number" name="numberInput" min="0" max="50" id="box_Mspeed" placeholder="0 - 50" step="10">
+                        <input type="number" name="numberInput" id="box_Mspeed" placeholder="0 - 50" step="10">
                         <label id="unitMspeed">Hz</label>
                     </div>
 
@@ -130,19 +134,52 @@
 
                 <div class="manualbtn">
                     <span>
-                        <button class="button_stop" id="button_stop" onclick="button_man_stop()">STOP</button>
-                    <!-- <hr style="width: 320px; position:absolute; top: 358px; left: 27px;"/> -->
+                        <button class="button_stop" id="button_stop" onclick="button_man_stop()" disabled>STOP</button>
                     </span>
                     <span>
-                        <button class="button_start" id="button_start" onclick="button_man_start()">START</button>
-                    <!-- <hr style="width: 320px; position:absolute; top: 358px; left: 27px;"/> -->
+                        <button class="button_start" id="button_start" onclick="button_man_start()" disabled>START</button>
                     </span>
-                    
 
                 </div>
             </div>
         </div>
     </div>
+
+
+    <script>
+        const numberInputs = document.getElementById('box_Mspeed');
+    
+        // Function to be called after the delay
+        function publishData(value) {
+        //   console.log('Published Message:', value);
+          // Add your MQTT publish logic here
+        //   const speedValue = document.querySelector('#box_Mspeed').value;
+          const message = 'speed' + value + '#';                
+          client.send('IMP_CONTROL', message);
+          console.log('Published Manual Speed IMP_CONTROL:', message);
+
+        }
+    
+        // Function to handle input changes with a delay
+        let delayTimer;
+        function handleInput() {
+          clearTimeout(delayTimer); // Clear any existing timer
+    
+          // Set a new timer for a 2-second delay
+          delayTimer = setTimeout(() => {
+            const inputValue = numberInputs.value;
+            publishData(inputValue);
+          }, 2000);
+        }
+    
+        // Add event listener for the input event
+        numberInputs.addEventListener('input', handleInput);
+      </script>
+
+
+    <!-- ALLOW BUTTON START-->
+    <script src="js/Allow_Button_Start.js"></script>
+
 
     <!-- DAY OF TIMEON -->
     <script>
@@ -159,6 +196,8 @@
             document.getElementById('year').value = year;
         });
     </script>
+    
+
     <!-- TIME OF TIMEON -->
     <script>
         // JavaScript to manipulate the time input format
@@ -173,6 +212,36 @@
             document.getElementById('minutes').value = minutes;
         });
     </script>
+
+
+
+    <!-- FUNCTION FULL SCREEN -->
+    <script>
+        function toggleFullScreen() {
+        const elem = document.documentElement;
+
+        if (!document.fullscreenElement && !document.mozFullScreenElement &&
+            !document.webkitFullscreenElement && !document.msFullscreenElement) {
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) { /* Firefox */
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE/Edge */
+            elem.msRequestFullscreen();
+        }
+        } 
+
+        }
+        document.addEventListener('click', function() {
+          toggleFullScreen();
+        });
+        
+      </script>
+
+
+
 
 </body>
 </html>
