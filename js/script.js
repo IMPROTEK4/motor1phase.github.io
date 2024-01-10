@@ -96,25 +96,23 @@ function onMessageArrived(message) {
           }
           if (key === 'speed') {
             if (values != 0) {
-              // document.getElementById('box_Mspeed').style.backgroundColor = 'yellow';
+              document.getElementById('box_Mspeed').value = values;
 
               //  ---ALLOW BUTTON STOP
               ButtonStop = document.getElementById('button_stop');
               ButtonStop.disabled = false;
-
-              //  ---ALLOW BUTTON START
-              // ButtonStart = document.getElementById('button_start');
-              // ButtonStart.disabled = false;
             }
           }
 
-          if (key === 'stop') {
-            if (values == 0) {
-              alert("ម៉ូទ័រកំពុងដំណើរការ");
-            }else{
-              alert("ម៉ូទ័រឈប់ដំណើរការ");
-            }
-          }
+          // if (key === 'stop' & key === 'speed') {
+          //   if (values != 0) {
+          //     alert("ម៉ូទ័រកំពុងដំណើរការ");
+          //     console.log('HELLO');
+          //   }else if(document.getElementById('box_Mspeed') == 0){
+          //     console.log('HELLOs');
+          //     alert("ម៉ូទ័រឈប់ដំណើរការ");
+          //   }
+          // }
           // Add similar conditions for other keys (V, Hz) if needed
       }
   });
@@ -138,11 +136,6 @@ function button_man_start() {
   ButtonStart = document.getElementById('button_start');
   ButtonStart.disabled = true;
 
-  if (key === 'stop') {
-    if (values == 0) {
-      alert("ម៉ូទ័រកំពុងដំណើរការ");
-    }
-  }
 }
 
 // ---MANUAL BUTTON STOP 
@@ -165,11 +158,6 @@ function button_man_stop() {
   ButtonStop.disabled = true;
 
 
-  if (key === 'stop') {
-    if (values == 1) {
-      alert("ម៉ូទ័រឈប់ដំណើរការ");
-    }
-  }
 }
 
 

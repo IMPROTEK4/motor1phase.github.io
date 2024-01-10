@@ -126,7 +126,7 @@
                 <div class="mvolume">
                     <div class="Mspeed">
                         <label id="Mspeed">Speed:</label>
-                        <input type="number" name="numberInput" id="box_Mspeed" placeholder="0 - 50" step="10">
+                        <input type="number" name="numberInput" id="box_Mspeed" placeholder="0 - 50" style="text-align: center;">
                         <label id="unitMspeed">Hz</label>
                     </div>
 
@@ -151,9 +151,9 @@
     
         // Function to be called after the delay
         function publishData(value) {
-        //   console.log('Published Message:', value);
+          //   console.log('Published Message:', value);
           // Add your MQTT publish logic here
-        //   const speedValue = document.querySelector('#box_Mspeed').value;
+          //   const speedValue = document.querySelector('#box_Mspeed').value;
           const message = 'speed' + value + '#';                
           client.send('IMP_CONTROL', message);
           console.log('Published Manual Speed IMP_CONTROL:', message);
