@@ -97,10 +97,6 @@ function onMessageArrived(message) {
           if (key === 'speed') {
             if (values != 0) {
               document.getElementById('box_Mspeed').value = values;
-
-              //  ---ALLOW BUTTON STOP
-              ButtonStop = document.getElementById('button_stop');
-              ButtonStop.disabled = false;
             }
           }
 
@@ -117,6 +113,14 @@ function onMessageArrived(message) {
       }
   });
 
+  //  ---ALLOW BUTTON START
+  ButtonStart = document.getElementById('button_start');
+  ButtonStart.disabled = false;
+
+  //  ---ALLOW BUTTON STOP
+  ButtonStop = document.getElementById('button_stop');
+  ButtonStop.disabled = false;
+
   
 }
 
@@ -129,24 +133,24 @@ function button_man_start() {
   console.log('Published IMP_CONTROL:', message);
 
   //  ---ALLOW BUTTON STOP
-  ButtonStop = document.getElementById('button_stop');
-  ButtonStop.disabled = false;
+  // ButtonStop = document.getElementById('button_stop');
+  // ButtonStop.disabled = false;
 
   //  ---LOCK BUTTON STOP
-  ButtonStart = document.getElementById('button_start');
-  ButtonStart.disabled = true;
+  // ButtonStart = document.getElementById('button_start');
+  // ButtonStart.disabled = true;
 
-}
+}       
 
 // ---MANUAL BUTTON STOP 
 function button_man_stop() {
-  const InputMspeed = document.getElementById('box_Mspeed');
+  // const InputMspeed = document.getElementById('box_Mspeed');
 
   const message = 'stop';                
   client.send('IMP_CONTROL', message);
   console.log('Published IMP_CONTROL:', message);
 
-  InputMspeed.value = '';
+  // InputMspeed.value = '';
 
 
   //  ---LOCK BUTTON START
@@ -154,8 +158,8 @@ function button_man_stop() {
   // ButtonStart.disabled = true;
 
   //  ---LOCK BUTTON STOP
-  ButtonStop = document.getElementById('button_stop');
-  ButtonStop.disabled = true;
+  // ButtonStop = document.getElementById('button_stop');
+  // ButtonStop.disabled = true;
 
 
 }
