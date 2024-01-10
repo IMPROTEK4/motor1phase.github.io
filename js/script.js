@@ -7,10 +7,11 @@ setTimeout(function() {
     ConnectToMQTT();
   }, 2000);
 function ConnectToMQTT(){
-  
-    clientID = 'MOTOR1PHASE';
-    host = 'blithesome-chiropractor.cloudmqtt.com';
-    port = 443;
+    // Generate a random number for the client ID
+    const randomClientNumber = Math.floor(Math.random() * 1000) + 1;
+    const clientID = 'USER' + randomClientNumber;
+          host = 'blithesome-chiropractor.cloudmqtt.com';
+          port = 443;
 
     // Create a client instance
     // client = new Paho.MQTT.Client('e8f424ec.emqx.cloud', 8083, "test");
@@ -21,15 +22,15 @@ function ConnectToMQTT(){
     client.onMessageArrived = onMessageArrived;
 
     // connect the client
-  client.connect({
-    onSuccess: onConnect,
-    // onFailure: onFailure,
-    useSSL: true,
+    client.connect({
+      onSuccess: onConnect,
+      // onFailure: onFailure,
+      useSSL: true,
 
-    userName: 'rwufzabs',
-    password: 'kVZNw5Tuj6e5',
-    mqttVersion:4
-});
+      userName: 'rwufzabs',
+      password: 'kVZNw5Tuj6e5',
+      mqttVersion:4
+  });
 }
 
 
@@ -136,6 +137,12 @@ function button_man_start() {
   //  ---LOCK BUTTON STOP
   ButtonStart = document.getElementById('button_start');
   ButtonStart.disabled = true;
+
+  if (key === 'stop') {
+    if (values == 0) {
+      alert("ម៉ូទ័រកំពុងដំណើរការ");
+    }
+  }
 }
 
 // ---MANUAL BUTTON STOP 
@@ -156,6 +163,13 @@ function button_man_stop() {
   //  ---LOCK BUTTON STOP
   ButtonStop = document.getElementById('button_stop');
   ButtonStop.disabled = true;
+
+
+  if (key === 'stop') {
+    if (values == 1) {
+      alert("ម៉ូទ័រឈប់ដំណើរការ");
+    }
+  }
 }
 
 
