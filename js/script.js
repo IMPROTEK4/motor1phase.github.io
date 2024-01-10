@@ -96,18 +96,29 @@ function onMessageArrived(message) {
           if (key === 'speed') {
             if (values != 0) {
               // document.getElementById('box_Mspeed').style.backgroundColor = 'yellow';
+
               //  ---ALLOW BUTTON STOP
               ButtonStop = document.getElementById('button_stop');
               ButtonStop.disabled = false;
+
+              //  ---ALLOW BUTTON START
+              // ButtonStart = document.getElementById('button_start');
+              // ButtonStart.disabled = false;
+            }
+          }
+
+          if (key === 'stop') {
+            if (values == 0) {
+              alert("ម៉ូទ័រកំពុងដំណើរការ");
+            }else{
+              alert("ម៉ូទ័រឈប់ដំណើរការ");
             }
           }
           // Add similar conditions for other keys (V, Hz) if needed
       }
   });
 
-  //  ---LOCK BUTTON START
-  // ButtonStart = document.getElementById('button_start');
-  // ButtonStart.disabled = false;
+  
 }
 
 
@@ -136,6 +147,7 @@ function button_man_stop() {
   console.log('Published IMP_CONTROL:', message);
 
   InputMspeed.value = '';
+
 
   //  ---LOCK BUTTON START
   // ButtonStart = dgocument.getElementById('button_start');
