@@ -53,29 +53,27 @@
         <div class="footer">
             <div class="titlecontrol">
                 <h1 id="control">Control</h1>
-                <!-- <hr style="width: 345px; position:absolute; top: 302px; "/> -->
 
                 <fieldset>
                     <legend>Choose the function you want:</legend>
                     <div class="funselect">
                         <span class="scedualtitle">
-                            <input  type="checkbox" id="schedual" name="schedual" checked />
-                            <label style="margin-right: 60px;" for="schedual">Schedual</label>
+                            <label style="margin-right: 60px;" ><input type="checkbox" id="ScheduleMode" name="Schedule" onclick="toggleModes('ScheduleMode', 'ManualMode')">Schedule</label>
+                            
                         </span>
                         <span class="manualtitle">
-                            <input  type="checkbox" id="manual" name="manual" />
-                            <label for="manual">Manual</label>
+                            <label for="manual"><input type="checkbox" id="ManualMode" name="manual" onclick="toggleModes('ManualMode', 'ScheduleMode')">Manual</label>
+                            
                         </span>
                     </div>
                 </fieldset>
             </div>
 
-            <div class="schedual">
+            <div class="schedual" id="schedualDiv">
 
                 <div class="titlesch">
-                    <label id="schedualtitle">Schedual Mode:</label>
-                    <button class="button_set" id="button_set" onclick="button_set()">SET</button>
-                    <!-- <hr style="width: 338px; position:absolute; top: 434px; "/>    -->
+                    <label id="schedualtitle">Schedule Mode:</label>
+                    <button class="button_set" id="button_set" onclick="Schedule()">SET</button>
                 </div>
 
                 <div class="time">
@@ -84,13 +82,13 @@
 
                         <span>
                         <label id="label_dateON" for="dateInput">Date:</label>
-                        <input type="date" id="dateInput" name="dateInput">
+                        <input type="date" id="dateInputON" name="dateInput">
                         </span>
 
                         <span>
                         <label id="label_timeON" for="timeInput" >Time:</label>
-                        <input type="time" id="timeInput" name="timeInput">
-                    </span>
+                        <input type="time" id="timeInputON" name="timeInput">
+                        </span>
                     
                     </div>
                     <div class="timeOFF">
@@ -98,13 +96,13 @@
 
                         <span>
                         <label id="label_dateOFF" for="dateInput">Date:</label>
-                        <input type="date" id="dateInput" name="dateInput">
+                        <input type="date" id="dateInputOFF" name="dateInput">
                         </span>
 
                         <span>
                         <label id="label_timeOFF" for="timeInput">Time:</label>
-                        <input type="time" id="timeInput" name="timeInput">
-
+                        <input type="time" id="timeInputOFF" name="timeInput">
+                        </span>
                     </div>
 
                     <div class="svolume">
@@ -117,11 +115,9 @@
 
                 </div>      
             </div>
-            <div class="manual">
+            <div class="manual" id="manualDiv">
                 <div class="titleman">
                     <label id="manualtitle">Manual Mode:</label>
-
-                    <!-- <hr style="width: 338px; position:absolute; top: 641px; "/>    -->
                 </div>
                 <div class="mvolume">
                     <div class="Mspeed">
@@ -147,17 +143,23 @@
 
 
     <script>
-        const numberInputs = document.getElementById('box_Mspeed');
+        const InputNumberMspeed = document.getElementById('box_Mspeed');
+        const InputNumberSspeed = document.getElementById('box_Sspeed');
     
         // Function to be called after the delay
-        function publishData(value) {
+        // function SpublishData(value) {
+        //     // console.log('Published Message:', value);
+        //   const message = 'speed' + value + '#';                
+        //   client.send('IMP_CONTROL', message);
+        //   console.log('Published Manual Speed IMP_CONTROL:', message);
+        // }
+
+        // Function to be called after the delay
+        function MpublishData(value) {
           //   console.log('Published Message:', value);
-          // Add your MQTT publish logic here
-          //   const speedValue = document.querySelector('#box_Mspeed').value;
           const message = 'speed' + value + '#';                
           client.send('IMP_CONTROL', message);
           console.log('Published Manual Speed IMP_CONTROL:', message);
-
         }
     
         // Function to handle input changes with a delay
@@ -167,51 +169,29 @@
     
           // Set a new timer for a 2-second delay
           delayTimer = setTimeout(() => {
-            const inputValue = numberInputs.value;
-            publishData(inputValue);
+            const inputMValue = InputNumberMspeed.value;
+            const inputSValue = InputNumberSspeed.value;
+            MpublishData(inputMValue);
+            // SpublishData(inputSValue);
           }, 2000);
         }
     
         // Add event listener for the input event
-        numberInputs.addEventListener('input', handleInput);
+        InputNumberMspeed.addEventListener('input', handleInput);
+        InputNumberSspeed.addEventListener('input', handleInput);
       </script>
 
+    <!-- SELECT FUNCTION MODE-->
+    <script src="js/FunctionSelect.js"></script>
+
+    <!-- SCHEDULE MODE-->
+    <script src="js/ScheduleMode.js"></script>
 
     <!-- ALLOW BUTTON START-->
     <!-- <script src="js/Allow_Button_Start.js"></script> -->
 
 
-    <!-- DAY OF TIMEON -->
-    <script>
-        // JavaScript to manipulate the date input format
-        document.getElementById('dateInput').addEventListener('input', function () {
-            const dateInput = this.value;
-
-            // Extract day, month, and year from the input value
-            const [year, month, day] = dateInput.split('-');
-
-            // Populate separate input fields if needed
-            document.getElementById('day').value = day;
-            document.getElementById('month').value = month;
-            document.getElementById('year').value = year;
-        });
-    </script>
-    
-
-    <!-- TIME OF TIMEON -->
-    <script>
-        // JavaScript to manipulate the time input format
-        document.getElementById('timeInput').addEventListener('input', function () {
-            const timeInput = this.value;
-
-            // Extract hours and minutes from the input value
-            const [hours, minutes] = timeInput.split(':');
-
-            // Populate separate input fields if needed
-            document.getElementById('hours').value = hours;
-            document.getElementById('minutes').value = minutes;
-        });
-    </script>
+   
 
 
 

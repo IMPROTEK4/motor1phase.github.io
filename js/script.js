@@ -9,7 +9,7 @@ setTimeout(function() {
 function ConnectToMQTT(){
     // Generate a random number for the client ID
     const randomClientNumber = Math.floor(Math.random() * 1000) + 1;
-    const clientID = 'USER' + randomClientNumber;
+    const clientID = 'MOTOR 1PHASE' + randomClientNumber;
           host = 'blithesome-chiropractor.cloudmqtt.com';
           port = 443;
 
@@ -95,12 +95,18 @@ function onMessageArrived(message) {
             document.getElementById('box_frequency').value = values.toFixed(2);
           }
           if (key === 'speed') {
-            if (values != 0) {
               document.getElementById('box_Mspeed').value = values;
-            }
+
+              document.getElementById('box_Sspeed').value = values;
           }
 
-          // if (key === 'stop' & key === 'speed') {
+
+
+        const Voltage = document.getElementById('box_voltage').value;
+        const Current = document.getElementById('box_current').value;
+        const PF = '0.68';
+
+          // if (key === 'dri' & key === 'speed') {
           //   if (values != 0) {
           //     alert("ម៉ូទ័រកំពុងដំណើរការ");
           //     console.log('HELLO');
@@ -175,6 +181,11 @@ function button_read() {
   ButtonRead = document.getElementById('button_read');
   // ButtonRead.disabled = true;
   // ButtonRead.style.backgroundColor = 'green';
+
+
+  const Power = document.getElementById('box_power');
+  Power.value = (Voltage * Current * Math.sqrt(3) * PF).toFixed(2);
+        
 }
 
 

@@ -384,7 +384,7 @@ label {
     margin-right: 7px;
     margin-left: 10px;
 }
-.timeON #dateInput{
+.timeON #dateInputON{
     display: block;
     align-content: center;
     justify-content: center;
@@ -399,7 +399,7 @@ label {
     margin-right: -3px;
     margin-left: 10px;
 }
-.timeON #timeInput{
+.timeON #timeInputON{
     display: block;
     align-content: center;
     justify-content: center;
@@ -441,7 +441,7 @@ label {
     margin-right: 7px;
     margin-left: 10px;
 }
-.timeOFF #dateInput{
+.timeOFF #dateInputOFF{
     display: block;
     align-content: center;
     justify-content: center;
@@ -456,7 +456,7 @@ label {
     margin-right: -3px;
     margin-left: 10px;
 }
-.timeOFF #timeInput{
+.timeOFF #timeInputOFF{
     display: block;
     align-content: center;
     justify-content: center;
@@ -674,12 +674,12 @@ label {
         margin-top: 2px;
         /* background-color: yellow; */
     }
-.monitortitle hr{
+    .monitortitle hr{
         top: 200px;
     }
     .header .monborder h1{
         font-size: 35px;
-        margin-left: -600px;
+        margin-left: 0px;
         /* margin-top: 10px; */
     }
     .header .monborder .display{
@@ -688,6 +688,14 @@ label {
         margin-top: -20px;
         padding-left: 200px;
         /* background-color: red; */
+    }
+    .button_read {
+        font-size: 18px;
+        width: 100px;
+        height: 35px;
+        border-radius: 13px;
+        /* margin-right: 400px; */
+        margin-left: 300px;
     }
 
 
@@ -891,7 +899,7 @@ label {
         margin-right: 40px;
         margin-top: 13px;
     }
-    .timeON #dateInput{
+    .timeON #dateInputON{
         padding: 10px;
         width: 150px;
         height: 20px;
@@ -903,7 +911,7 @@ label {
         margin-right: 30px;
         margin-top: 13px;
     }
-    .timeON #timeInput{
+    .timeON #timeInputON{
         padding: 10px;
         width: 150px;
         height: 20px;
@@ -935,7 +943,7 @@ label {
         margin-right: 40px;
         margin-top: 13px;
     }
-    .timeOFF #dateInput{
+    .timeOFF #dateInputOFF{
         padding: 10px;
         width: 150px;
         height: 20px;
@@ -947,7 +955,7 @@ label {
         margin-right: 30px;
         margin-top: 13px;
     }
-    .timeOFF #timeInput{
+    .timeOFF #timeInputOFF{
         padding: 10px;
         width: 150px;
         height: 20px;
